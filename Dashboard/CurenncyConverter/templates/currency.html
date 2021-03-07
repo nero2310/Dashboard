@@ -1,2 +1,7 @@
-{% include "base.html" %}
-Działa
+{% extends "base.html" %}
+{% block content %}
+    {% for key,value in rates.items %}
+        {{ key }}:{{ value }}
+    {% endfor %}
+{% endblock %}
+
