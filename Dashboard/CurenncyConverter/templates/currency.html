@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
+    {% load currency_methods %}
     {% for key,value in rates.items %}
-        {{ key }}:{{ value }}
+
+        {{ key }}:{{ value|round_currency:3 }}
         <br>
     {% endfor %}
 {% endblock %}
